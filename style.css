@@ -60,36 +60,14 @@ h4 {
     font-size: 1.1rem;
 }
 
-p {
-    margin-bottom: 0.8rem;
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
+/* ===== RESET & BASE (Mise à jour de la base de paragraphe) ===== */
+/* ... (Code non modifié) ... */
+/* ===================================================
+   UNIFICATION DE LA TAILLE DU TEXTE DESCRIPTIF (1.2rem)
+   Ceci cible toutes les classes spécifiques pour garantir l'uniformité.
+   =================================================== */
 
-/* ===== TEXTES COURANTS ===== */
-.hero-description,
-.description,
-.experience-description,
-.project-description,
-.project-features li,
-.experience-list li,
-.contact-intro p {
-    font-size: 1.15rem; 
-    line-height: 1.9;
-    text-align: justify; 
-}
 
-/* ===== SECTIONS FULLPAGE ===== */
-.section {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 20px;
-    position: relative;
-    background: var(--darker);
-}
 
 .section .container {
     width: 100%;
@@ -414,7 +392,7 @@ p {
     position: absolute;
     bottom: -10px;
     left: 0;
-    width: 50%;
+    width: 115%;
     height: 4px;
     background: linear-gradient(90deg, var(--info-accent), var(--accent));
     border-radius: 2px;
@@ -1621,6 +1599,32 @@ footer hr {
     height: 100vh !important;
     padding-top: 100px;
     padding-bottom: 50px;
+}
+
+p, /* Sélecteur de base */
+.hero-description p, /* Paragraphes dans la section Accueil */
+.description, /* Descriptions des formations */
+.experience-description, /* Descriptions des expériences */
+.project-slide-description, /* Descriptions des projets dans le slider */
+.project-features li, /* Listes de fonctionnalités */
+.experience-list li, /* Listes d'expériences */
+.contact-intro p 
+{
+    font-size: 1.5rem; 
+    line-height: 1.9;
+    text-align: justify; 
+}
+
+/* ===== SECTIONS FULLPAGE ===== */
+.section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    position: relative;
+    background: var(--darker);
 }
 
 /* Force les sections pleines pages qui ne sont pas auto-height à prendre la taille de l'écran */
