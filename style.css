@@ -77,12 +77,28 @@ h4 {
 }
 
 /* Sections avec scroll interne */
-#competences,
+/* =======================================
+   MASQUAGE DES BARRES DE DÉFILEMENT
+   (Sections Compétences et Réalisations)
+   ======================================= */
+
+/* 1. Masquage pour les navigateurs basés sur WebKit (Chrome, Safari, Edge récent) */
+#competences::-webkit-scrollbar,
+#realisations::-webkit-scrollbar {
+    width: 0 !important; /* Cache la barre verticale */
+    height: 0 !important; /* Cache la barre horizontale */
+    display: none;
+}
+
+/* 2. Masquage pour Firefox */
+#competences {
+    scrollbar-width: none; /* Cache la barre pour Firefox */
+    -ms-overflow-style: none; /* Ancien sélecteur pour Edge/IE */
+}
+
 #realisations {
-    display: block;
-    overflow-y: auto;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    scrollbar-width: none; /* Cache la barre pour Firefox */
+    -ms-overflow-style: none; /* Ancien sélecteur pour Edge/IE */
 }
 
 /* Section contact avec hauteur auto */
